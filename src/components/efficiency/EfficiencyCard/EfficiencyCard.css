@@ -1,0 +1,52 @@
+.efficiency-card {
+  @apply flex flex-col border-primary-100 md:flex-row border rounded-lg my-6;
+}
+.efficiency-card:first-of-type {
+  @apply mt-0;
+}
+.efficiency-card__line-chart-section {
+  @apply flex flex-col md:basis-3/4 md:border-r border-primary-100;
+}
+.efficiency-card__line-chart-section-heading {
+  @apply flex flex-col md:flex-row items-center justify-between p-6 pb-0;
+}
+.efficiency-card__change-criteria {
+  @apply text-lg text-secondary-100 font-sans-semibold;
+}
+.efficiency-card__change-value {
+  @apply text-xs px-4 py-2 mx-4 rounded font-semibold text-green-100 bg-green-100/10 font-sans-semibold;
+}
+.efficiency-card__status\/filter {
+  @apply flex items-center mt-4 md:mt-0;
+}
+.efficiency-card__status {
+  @apply text-sm border-r border-primary-100 text-secondary-100 font-medium md:pr-4 py-1 whitespace-nowrap pr-2 font-sans-medium;
+}
+.efficiency-card__status--legend {
+  @apply w-2.5 h-2.5 bg-secondary-100 rounded-sm mr-2 inline-block;
+}
+.efficiency-card__filter {
+  @apply text-sm border-primary-100 text-secondary-100 border rounded-lg md:ml-4 ml-3 px-4 py-2.5 font-sans-medium font-medium;
+}
+.efficiency-card__filter-icon {
+  @apply absolute top-3 right-10;
+}
+.efficiency-card__filter-icon path {
+  @apply fill-secondary-100;
+}
+.efficiency-card__filter::placeholder {
+  @apply text-secondary-100;
+}
+.efficiency-card__time-card-section {
+  @apply flex justify-center md:flex-col md:basis-1/4  py-6 px-7;
+}
+.efficiency-card__time-card {
+  @apply my-2 border-primary-100 mx-2 w-1/2 md:w-auto md:mx-0 border rounded-xl py-6 px-5 md:h-2/4 flex flex-col justify-center h-auto;
+  background-color: #fafafa;
+}
+.efficiency-card__time-card-title {
+  @apply text-sm mb-3 text-primary-200;
+}
+.efficiency-card__time-card-value {
+  @apply text-xl text-secondary-100 font-sans-semibold;
+}

@@ -1,0 +1,12 @@
+.app-l-tab__header {
+  @apply flex border-b border-primary-100 px-4 max-w-full w-screen md:w-auto overflow-x-auto;
+}
+.app-l-tab__header .app-l-tab__header-item {
+  @apply mx-6 py-4 text-base cursor-pointer whitespace-nowrap;
+}
+.app-l-tab__header .app-l-tab__header-item.app-l-tab__header-item--active {
+  @apply border-b-2 border-blue-200 text-secondary-100 font-sans-medium;
+}
+.app-l-tab__child {
+  @apply py-7 md:px-10 px-7 max-w-full;
+}

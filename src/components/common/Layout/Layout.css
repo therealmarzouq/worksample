@@ -1,0 +1,15 @@
+.app-l-root {
+  @apply relative min-h-screen flex md:flex-row;
+}
+.app-l-mobile-menu__button {
+  @apply md:hidden;
+}
+.app-l-sidebar {
+  @apply absolute md:static min-h-screen border-primary-100 h-full bg-white md:border-r py-5 px-5 z-50 w-80 md:w-72 z-50;
+}
+.app-l-main {
+  @apply basis-full;
+}
+.app-l-header {
+  @apply py-4 md:px-12 px-6 border-primary-100 border-b flex justify-between items-center;
+}

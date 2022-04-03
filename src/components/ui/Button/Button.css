@@ -1,0 +1,10 @@
+.app-c-button__root {
+  @apply font-sans-medium px-4 py-2 rounded-lg text-base whitespace-nowrap flex items-center justify-between;
+}
+.app-c-button__root--primary {
+  @apply justify-center bg-green-100 text-white;
+  min-width: 6rem;
+}
+.app-c-button__root--naked {
+  @apply border border-primary-100;
+}

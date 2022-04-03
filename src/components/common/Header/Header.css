@@ -1,0 +1,12 @@
+.app-l-header__actions {
+  @apply flex items-center border rounded-lg p-2 border-primary-100;
+}
+.app-l-header__actions > .app-l-header__action--icon {
+  @apply px-2;
+}
+.app-l-header__actions > .app-l-header__action--icon:first-of-type {
+  @apply border-r pr-5;
+}
+.app-l-header__actions > .app-l-header__action--icon:last-of-type {
+  @apply pl-5;
+}

@@ -1,0 +1,19 @@
+.app-c-searchbar__root {
+  @apply relative h-full w-full md:max-w-sm;
+}
+.app-c-searchbar__input {
+  @apply h-full px-6 py-3 rounded-lg;
+}
+.app-c-searchbar__input--a {
+  @apply py-4 pr-10 w-full;
+  background-color: #fafafc;
+}
+.app-c-searchbar__input--b {
+  @apply border pl-10 border-primary-100;
+}
+.app-c-searchbar__icon-container {
+  @apply absolute top-1/4 right-4;
+}
+.app-c-searchbar__icon-container--start {
+  @apply absolute top-1/4 left-4;
+}
