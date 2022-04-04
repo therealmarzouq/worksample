@@ -1,11 +1,11 @@
-import React from "react";
+import React from 'react'
 // import { Sidebar, Button, Modal, LoadingDots } from "@components/ui";
-import { Sidebar } from "../../ui";
-import { Header } from "../../common";
-import "./Layout.css";
+import { Sidebar } from '../../ui'
+import { Header } from '../../common'
+import './Layout.css'
 
-const Layout = ({ children, pageProps }) => {
-  const [isSidebarOpen, setIsSidebarOpen] = React.useState(false);
+const Layout = ({ children }) => {
+  const [isSidebarOpen, setIsSidebarOpen] = React.useState(false)
   return (
     <div className="app-l-root">
       <Sidebar
@@ -21,10 +21,9 @@ const Layout = ({ children, pageProps }) => {
           }
         />
         {children}
-        {/* <p className="text-7xl">Lorem ipsum dolor sit amet.</p> */}
       </main>
     </div>
-  );
-};
+  )
+}
 
-export default Layout;
+export default Layout

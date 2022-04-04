@@ -1,30 +1,29 @@
-import React, { useEffect, useState } from "react";
-import { TabPane } from "../../common";
-import "./Tabs.css";
+import React, { useEffect, useState } from 'react'
+import { TabPane } from '../../common'
+import './Tabs.css'
 
 const Tabs = (props) => {
-  const { children } = props;
-  const [tabHeader, setTabHeader] = useState([]);
-  const [childContent, setChildConent] = useState({});
-  const [active, setActive] = useState("");
+  const { children } = props
+  const [tabHeader, setTabHeader] = useState([])
+  const [childContent, setChildConent] = useState({})
+  const [active, setActive] = useState('')
   useEffect(() => {
-    const headers = [];
-    const childCnt = {};
+    const headers = []
+    const childCnt = {}
     React.Children.forEach(children, (element) => {
-      if (!React.isValidElement(element)) return;
-      const { name } = element.props;
-      headers.push(name);
-      childCnt[name] = element.props.children;
-    });
-    setTabHeader(headers);
-    setActive(headers[0]);
-    setChildConent({ ...childCnt });
-    console.log(childCnt);
-  }, [props, children]);
+      if (!React.isValidElement(element)) return
+      const { name } = element.props
+      headers.push(name)
+      childCnt[name] = element.props.children
+    })
+    setTabHeader(headers)
+    setActive(headers[0])
+    setChildConent({ ...childCnt })
+  }, [props, children])
 
   const changeTab = (name) => {
-    setActive(name);
-  };
+    setActive(name)
+  }
 
   return (
     <div className="tabs">
@@ -34,10 +33,11 @@ const Tabs = (props) => {
             onClick={() => changeTab(item)}
             key={item}
             className={
-              "app-l-tab__header-item" +
-              " " +
-              (item === active ? "app-l-tab__header-item--active" : "")
-            }>
+              'app-l-tab__header-item' +
+              ' ' +
+              (item === active ? 'app-l-tab__header-item--active' : '')
+            }
+          >
             {item}
           </li>
         ))}
@@ -45,30 +45,30 @@ const Tabs = (props) => {
       <div className="app-l-tab__content">
         {Object.keys(childContent).map((key) => {
           if (key === active) {
-            return <div className="app-l-tab__child">{childContent[key]}</div>;
+            return <div className="app-l-tab__child">{childContent[key]}</div>
           } else {
-            return null;
+            return null
           }
         })}
       </div>
     </div>
-  );
-};
+  )
+}
 
 Tabs.propTypes = {
   children: function (props, propName, componentName) {
-    const prop = props[propName];
+    const prop = props[propName]
 
-    let error = null;
+    let error = null
     React.Children.forEach(prop, function (child) {
       if (child.type !== TabPane) {
         error = new Error(
-          "`" + componentName + "` children should be of type `TabPane`."
-        );
+          '`' + componentName + '` children should be of type `TabPane`.'
+        )
       }
-    });
-    return error;
+    })
+    return error
   },
-};
+}
 
-export default Tabs;
+export default Tabs
